@@ -1,4 +1,6 @@
 const yargs = require('yargs');
+const Note = require('../models/Note');
+const addNote = require('../repository/AddNote');
 
 const buildAddCommand = () => {
     
@@ -20,8 +22,8 @@ const buildAddCommand = () => {
         },
         handler: (argv) => {
             const {title, body} = argv;
-            console.log('adding a new note with title =>', title);
-            console.log('note body:', body);
+            const note = new Note(title, body);
+            addNote(note);
         }
     });
 
