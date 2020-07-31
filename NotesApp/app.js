@@ -1,6 +1,3 @@
-const Notes = require('./Notes');
-const validator = require('validator');
+const chalk = require('chalk');
 
-console.log(new Notes().GetNotes());
-console.log(validator.isEmail('foor@bar.com'));
-console.log(validator.isURL('bar.com'));
+console.log(chalk.green.bold.inverse('success!!'));
