@@ -1,4 +1,6 @@
-const buildListCommand = (yargs) => {
+const yargs = require('yargs');
+
+const buildListCommand = () => {
 
     yargs.command({
         command: 'list',

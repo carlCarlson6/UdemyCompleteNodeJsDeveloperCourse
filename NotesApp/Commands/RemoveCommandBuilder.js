@@ -1,4 +1,6 @@
-const buildRemoveCommand = (yargs) => {
+const yargs = require('yargs');
+
+const buildRemoveCommand = () => {
     
     yargs.command({
         command: 'remove',

@@ -1,4 +1,6 @@
-const buildReadCommand = (yargs) => {
+const yargs = require('yargs');
+
+const buildReadCommand = () => {
     
     yargs.command({
         command: 'read',

@@ -1,15 +1,15 @@
-const buildAddCommand = require('./AddCommand');
-const buildListCommand = require('./ListCommand');
-const buildReadCommand = require('./ReadCommand');
-const buildRemoveCommand = require('./RemoveCommand');
+const buildAddCommand = require('./AddCommandBuilder');
+const buildListCommand = require('./ListCommandBuilder');
+const buildReadCommand = require('./ReadCommandBuilder');
+const buildRemoveCommand = require('./RemoveCommandBuilder');
 
-const commandsBuilder = (yargs) => {
+const buildCommands = () => {
 
-    buildAddCommand(yargs);
-    buildListCommand(yargs);
-    buildReadCommand(yargs);
-    buildRemoveCommand(yargs);
+    buildAddCommand();
+    buildListCommand();
+    buildReadCommand();
+    buildRemoveCommand();
 
 }
 
-module.exports = commandsBuilder;
+module.exports = buildCommands;
