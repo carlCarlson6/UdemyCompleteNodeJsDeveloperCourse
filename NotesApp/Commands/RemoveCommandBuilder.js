@@ -1,11 +1,22 @@
 const yargs = require('yargs');
+const removeNote = require('../controllers/RemoveNote');
 
 const buildRemoveCommand = () => {
     
     yargs.command({
         command: 'remove',
         describe: 'remove a note',
-        handler: () => console.log('removing the note') 
+        builder: {
+            title: {
+                describe: 'note title',
+                demandOption: true,
+                type: "string"
+            }
+        },
+        handler: (argsv) => {
+            const {title} = argsv;
+            removeNote(title);
+        }
     });
 
 }

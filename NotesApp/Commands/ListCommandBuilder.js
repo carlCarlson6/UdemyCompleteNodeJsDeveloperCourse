@@ -1,5 +1,5 @@
 const yargs = require('yargs');
-const listNotes = require('../repository/ListNotes');
+const listNotes = require('../controllers/ListNotes');
 
 const buildListCommand = () => {
 

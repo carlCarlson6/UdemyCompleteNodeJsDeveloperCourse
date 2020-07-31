@@ -1,6 +1,6 @@
 const yargs = require('yargs');
-const Note = require('../models/Note');
-const addNote = require('../repository/AddNote');
+const Note = require('../common/models/Note');
+const addNote = require('../controllers/AddNote');
 
 const buildAddCommand = () => {
     

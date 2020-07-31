@@ -1,11 +1,22 @@
 const yargs = require('yargs');
+const readNote = require('../controllers/ReadNote');
 
 const buildReadCommand = () => {
     
     yargs.command({
         command: 'read',
         describe: 'read a note',
-        handler: () => console.log('reading the notes') 
+        builder: {
+            title: {
+                describe: 'note title',
+                demandOption: true,
+                type: "string"
+            }
+        },
+        handler: (argsv) => {
+            const {title} = argsv;
+            readNote(title);
+        } 
     });
 
 }
