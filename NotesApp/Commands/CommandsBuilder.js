@@ -4,12 +4,10 @@ const buildReadCommand = require('./ReadCommandBuilder');
 const buildRemoveCommand = require('./RemoveCommandBuilder');
 
 const buildCommands = () => {
-
     buildAddCommand();
     buildListCommand();
     buildReadCommand();
     buildRemoveCommand();
-
 }
 
 module.exports = buildCommands;

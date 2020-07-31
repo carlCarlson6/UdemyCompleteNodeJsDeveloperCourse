@@ -3,10 +3,11 @@ const Note = require('../common/models/Note');
 const addNote = require('../controllers/AddNote');
 
 const buildAddCommand = () => {
-    
     yargs.command({
         command: 'add',
+        
         describe: 'add a new note',
+
         builder: {
             title: {
                 describe: 'note title',
@@ -25,6 +26,7 @@ const buildAddCommand = () => {
             const note = new Note(title, body);
             addNote(note);
         }
+    
     });
 
 }
