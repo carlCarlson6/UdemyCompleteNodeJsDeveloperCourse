@@ -1,7 +1,7 @@
 const yargs = require('yargs');
-const listNotes = require('../controllers/ListNotes');
+const listNotes = require('../services/ListNotes');
 
-const buildListCommand = () => {
+const buildListController = () => {
     yargs.command({
         command: 'list',
     
@@ -12,4 +12,4 @@ const buildListCommand = () => {
 
 } 
 
-module.exports = buildListCommand;
+module.exports = buildListController;

@@ -1,8 +1,8 @@
-const DataManager = require('../repository/DataManager');
+const NotesRepository = require('../repository/NotesRepository');
 const path = require('../common/PathToData');
 
 const readNote = (noteTitle) => {
-    let data = new DataManager().LoadData(path); 
+    let data = new NotesRepository().LoadNotes(path); 
     const notes = data.filter(note => note.title === noteTitle);
     console.log(notes);
 }

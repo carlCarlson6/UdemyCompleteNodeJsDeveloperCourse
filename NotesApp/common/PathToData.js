@@ -1,3 +1,3 @@
-const path = 'repository/data/notes.json';
+const path = 'data/notes.json';
 
 module.exports = path;

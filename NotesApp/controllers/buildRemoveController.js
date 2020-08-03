@@ -1,7 +1,7 @@
 const yargs = require('yargs');
-const removeNote = require('../controllers/RemoveNote');
+const removeNote = require('../services/RemoveNote');
 
-const buildRemoveCommand = () => {
+const buildRemoveController = () => {
     yargs.command({
         command: 'remove',
         
@@ -15,12 +15,9 @@ const buildRemoveCommand = () => {
             }
         },
 
-        handler: (argsv) => {
-            const {title} = argsv;
-            removeNote(title);
-        }
+        handler: (argsv) => removeNote(argsv.title)
     });
 
 }
 
-module.exports = buildRemoveCommand;
+module.exports = buildRemoveController;

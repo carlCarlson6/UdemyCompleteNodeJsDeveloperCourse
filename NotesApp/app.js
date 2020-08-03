@@ -1,6 +1,5 @@
 const yargs = require('yargs');
-const buildCommands = require('./Commands/CommandsBuilder');
+const buildController = require('./controllers/ControllersBuilder');
 
-buildCommands()
-
+buildController();
 yargs.parse();

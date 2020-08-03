@@ -1,7 +1,7 @@
 const yargs = require('yargs');
-const readNote = require('../controllers/ReadNote');
+const readNote = require('../services/ReadNote');
 
-const buildReadCommand = () => {
+const buildReadController = () => {
     yargs.command({
         command: 'read',
 
@@ -15,12 +15,9 @@ const buildReadCommand = () => {
             }
         },
 
-        handler: (argsv) => {
-            const {title} = argsv;
-            readNote(title);
-        } 
+        handler: (argsv) => readNote(argsv.title)
     });
 
 }
 
-module.exports = buildReadCommand;
+module.exports = buildReadController;

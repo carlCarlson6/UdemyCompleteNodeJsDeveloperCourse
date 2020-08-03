@@ -1,8 +1,8 @@
 const path = require('../common/PathToData');
-const DataManager = require('../repository/DataManager');
+const NotesRepository = require('../repository/NotesRepository');
 
 const listNotes = () => {
-    let data = new DataManager().LoadData(path); 
+    let data = new NotesRepository().LoadNotes(path); 
     console.log(data);
 }
 
