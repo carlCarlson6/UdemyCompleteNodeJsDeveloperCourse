@@ -2,8 +2,10 @@ const fs = require('fs');
 
 class NotesRepository {
     LoadNotes(path) {
+        debugger
         const notesBuffer = fs.readFileSync(path); 
         const notes = JSON.parse(notesBuffer.toString());
+        debugger
         return notes;
     }
 
