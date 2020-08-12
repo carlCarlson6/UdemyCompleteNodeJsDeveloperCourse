@@ -1,6 +1,19 @@
-console.log('start');
+import request from 'request';
+import axios from 'axios';
 
-setTimeout(() => {console.log('2 seconds')}, 200);
-setTimeout(() => {console.log('0 seconds')}, 0);
+const url = 'http://api.weatherstack.com/current?access_key=709d84e2dbd148be34b4f1edefce8dd8&query=losa del obispo';
 
-console.log('stop');
+const requestOptions = {
+    url: url,
+    json: true
+}
+
+//let reqResponse: request.Response;
+//request(requestOptions, (error, response) => {
+//    reqResponse = response;
+//})
+//console.log(reqResponse.body.current);
+
+const response = axios.get(url);
+
+console.log(response.body.current)
