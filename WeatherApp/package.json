@@ -1,0 +1,17 @@
+{
+  "name": "weatherapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "ts": "tsc -w",
+    "dev": "nodemon ./build/index.js",
+    "start": "tsc && node ./build/index.js"
+  },
+  "author": "Carlos Acitores Deval",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.4",
+    "typescript": "^3.9.7"
+  }
+}
